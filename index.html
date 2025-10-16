@@ -12,7 +12,7 @@
         <header>
             <div class="language-selector">
                 <button class="language-btn" id="languageBtn">
-                    <span class="language-flag" id="currentFlag">??</span>
+                    <span class="language-flag" id="currentFlag">🌐</span>
                     <span id="currentLanguage">English</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
@@ -40,7 +40,7 @@
                     <input type="text" class="url-input" placeholder="Paste video link here..." id="videoUrl">
                     <button class="download-btn" id="fetchBtn">
                         <i class="fas fa-download"></i>
-                        <span id="downloadText">Download</span>
+                        <span id="downloadText">Get Video</span>
                     </button>
                 </div>
 
@@ -49,68 +49,52 @@
                         <div class="platform-icon youtube">
                             <i class="fab fa-youtube"></i>
                         </div>
-                        <span class="platform-name" id="platformYoutube">YouTube</span>
+                        <span class="platform-name">YouTube</span>
                     </div>
                     <div class="platform" data-platform="tiktok">
                         <div class="platform-icon tiktok">
                             <i class="fab fa-tiktok"></i>
                         </div>
-                        <span class="platform-name" id="platformTiktok">TikTok</span>
+                        <span class="platform-name">TikTok</span>
                     </div>
                     <div class="platform" data-platform="facebook">
                         <div class="platform-icon facebook">
                             <i class="fab fa-facebook"></i>
                         </div>
-                        <span class="platform-name" id="platformFacebook">Facebook</span>
-                    </div>
-                    <div class="platform" data-platform="twitter">
-                        <div class="platform-icon twitter">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <span class="platform-name" id="platformTwitter">Twitter</span>
+                        <span class="platform-name">Facebook</span>
                     </div>
                     <div class="platform" data-platform="instagram">
                         <div class="platform-icon instagram">
                             <i class="fab fa-instagram"></i>
                         </div>
-                        <span class="platform-name" id="platformInstagram">Instagram</span>
+                        <span class="platform-name">Instagram</span>
                     </div>
-                    <div class="platform" data-platform="telegram">
-                        <div class="platform-icon telegram">
-                            <i class="fab fa-telegram"></i>
+                    <div class="platform" data-platform="twitter">
+                        <div class="platform-icon twitter">
+                            <i class="fab fa-twitter"></i>
                         </div>
-                        <span class="platform-name" id="platformTelegram">Telegram</span>
+                        <span class="platform-name">Twitter</span>
+                    </div>
+                    <div class="platform" data-platform="whatsapp">
+                        <div class="platform-icon whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="platform-name">WhatsApp</span>
                     </div>
                 </div>
 
-                <div class="features">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div class="feature-title" id="feature1Title">Fast Download</div>
-                        <div class="feature-desc" id="feature1Desc">High-speed downloading</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="feature-title" id="feature2Title">Safe & Secure</div>
-                        <div class="feature-desc" id="feature2Desc">No malware or viruses</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-infinity"></i>
-                        </div>
-                        <div class="feature-title" id="feature3Title">Free Forever</div>
-                        <div class="feature-desc" id="feature3Desc">Unlimited free usage</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="feature-title" id="feature4Title">Mobile Friendly</div>
-                        <div class="feature-desc" id="feature4Desc">Works on all devices</div>
+                <div class="supported-info">
+                    <h3 id="supportedTitle">Supported Platforms</h3>
+                    <div class="site-tags">
+                        <span class="site-tag">YouTube</span>
+                        <span class="site-tag">TikTok</span>
+                        <span class="site-tag">Facebook</span>
+                        <span class="site-tag">Instagram</span>
+                        <span class="site-tag">Twitter</span>
+                        <span class="site-tag">WhatsApp</span>
+                        <span class="site-tag">Vimeo</span>
+                        <span class="site-tag">Dailymotion</span>
+                        <span class="site-tag">+20 more</span>
                     </div>
                 </div>
             </div>
@@ -122,56 +106,64 @@
 
             <div class="main-card result" id="result">
                 <div class="preview-header">
-                    <h3 class="preview-title" id="previewTitle">Video Preview</h3>
+                    <h3 class="preview-title" id="previewTitle">Video Information</h3>
                     <div class="detected-platform">
                         <i class="fab fa-youtube" id="platformIcon"></i>
-                        <span id="platformName">YouTube</span>
+                        <span id="platformName">Platform</span>
                     </div>
                 </div>
 
-                <div class="video-preview">
-                    <div class="video-placeholder" id="videoPlaceholder">
-                        <i class="fas fa-play-circle"></i>
-                        <span id="placeholderText">Video preview will appear here</span>
+                <div class="video-info-card">
+                    <div class="thumbnail-container">
+                        <img id="videoThumbnail" src="" alt="Video Thumbnail">
+                        <div class="thumbnail-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="video-details">
+                        <h4 class="video-title" id="videoTitle">Video Title</h4>
+                        <div class="video-meta">
+                            <div class="meta-item">
+                                <i class="far fa-clock"></i>
+                                <span id="videoDuration">0:00</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="far fa-calendar"></i>
+                                <span id="videoDate">-</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="far fa-eye"></i>
+                                <span id="videoViews">0 views</span>
+                            </div>
+                        </div>
+                        <p class="video-description" id="videoDescription">Video description will appear here...</p>
                     </div>
                 </div>
 
-                <div class="video-info">
-                    <h4 class="video-title" id="videoTitle">Video title will appear here</h4>
-                    <div class="video-meta">
-                        <div class="meta-item">
-                            <i class="far fa-clock"></i>
-                            <span id="videoDuration">0:00</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="far fa-calendar"></i>
-                            <span id="videoDate">Jan 1, 2023</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="far fa-eye"></i>
-                            <span id="videoViews">0 views</span>
-                        </div>
+                <div class="download-section">
+                    <h4 id="downloadOptionsTitle">Download Options</h4>
+                    <div class="quality-options" id="qualityOptions">
+                        <!-- Quality options will be loaded here -->
                     </div>
-                </div>
-
-                <div class="quality-options" id="qualityOptions"></div>
-
-                <div class="download-options">
-                    <button class="option-btn video-btn" id="downloadVideo">
-                        <i class="fas fa-video"></i>
-                        <span id="downloadVideoText">Download Video</span>
-                    </button>
-                    <button class="option-btn audio-btn" id="downloadAudio">
-                        <i class="fas fa-music"></i>
-                        <span id="downloadAudioText">Download Audio</span>
-                    </button>
+                    
+                    <div class="download-actions">
+                        <button class="action-btn primary-btn" id="downloadVideoBtn">
+                            <i class="fas fa-download"></i>
+                            <span id="downloadVideoText">Download Video</span>
+                        </button>
+                        <button class="action-btn secondary-btn" id="downloadAudioBtn">
+                            <i class="fas fa-music"></i>
+                            <span id="downloadAudioText">Download Audio</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>
 
         <footer>
-            <p id="footerText">VideoDownloader Pro &copy; 2023 - All rights reserved</p>
-            <p class="security-text" id="securityText">Safe & Secure Video Downloads</p>
+            <p id="footerText">VideoDownloader Pro &copy; 2024 - All rights reserved</p>
+            <p class="security-text" id="securityText">Safe & Secure Video Downloads - No Registration Required</p>
         </footer>
     </div>
 
